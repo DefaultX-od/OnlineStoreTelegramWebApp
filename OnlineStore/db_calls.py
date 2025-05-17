@@ -222,7 +222,6 @@ def insert_order(user_id, drop_point_id = 1, payment_method_id = 1):
     cursor.callproc('insert_order', [cart_id, user_id, drop_point_id, payment_method_id])
     cursor.execute('SELECT LAST_INSERT_ID()')
     order_id = cursor.fetchone()[0]
-    print(order_id)
     conn.commit()
     cursor.close()
     conn.close()
