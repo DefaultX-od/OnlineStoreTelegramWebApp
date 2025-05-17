@@ -266,12 +266,10 @@ function createOrder(){
         .then(data => {
             history.replaceState({isInitial: true, screen: 'orders'},null,null);
             updateBackButtonVisibility();
-            console.log(data.order_id);
             fetchOrder(data.order_id, true);
-            // updateCartSummary();
         })
         .catch(error => {
-            // console.error('Ошибка загрузки контента:', error);
+            console.error('Ошибка загрузки контента:', error);
             document.getElementById('content').style.display = 'flex';
             document.getElementById('content').innerHTML = "<h2>Произошла ошибка при загрузке контента. Попробуйте еще раз.</h2>";
         });
