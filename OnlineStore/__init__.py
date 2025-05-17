@@ -142,7 +142,6 @@ def show_items():
         items = get_items_from_group(item_group_id)
         with ThreadPoolExecutor() as executor:
             executor.map(lambda item: item.update({'album': get_images(item['album'])[0]}), items)
-        print(items[0])
         return jsonify(data=items)
 
 
