@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <title>Petshelter Web App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/gallery.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/item-containers.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/buttons.css') }}">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header-icon" id="header-icon">
+            <img src="static/img/home-active.png" alt="Главная" class="icon" id="icon">
+        </div>
+        <h1 id="app-page-title">Главная</h1>
+        <div class="page-controls" id="page-controls"></div>
+        <div class="page-controls" id="page-controls1"></div>
+    </header>
+
+    <div id="loading" class="loading-container" style="display:flex">
+        <img src="static/img/spinner.gif" alt="Загрузка" class="loading-img">
+    </div>
+
+    <main id="content" class="main-content">
+    </main>
+    <div class="overlay" id="warningOverlay" style="display: none;">
+        <div class="warning">
+            <div class="warning-text">Вы уверены что хотите продолжить?</div>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; gap: 5px">
+                <div class="full-length-btn" id="action-confirmation-btn">Да</div>
+                <div class="full-length-btn" onclick="closeWarningOverlay()">Нет</div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="order-overlay" style="display: none;">
+        <div class="form" id="order-form">
+            <div>
+                <div class="section-sub-col">
+                    <div class="section-title">Оформление заказа</div>
+                    <div class="round-btn" onclick="closeOrderOverlay()">
+                        <img src="{{ url_for('static', filename='img/close.png') }}">
+                    </div>
+                </div>
+                <div>
+                    <div id="loading-order-options" class="loading-container white-bg"
+                        style="display:flex; align-content: center; align-items: center;">
+                        <div class="section-title">Один момент...</div>
+                        <img src="static/img/spinner.gif" alt="Загрузка" class="loading-img">
+                    </div>
+                    <div>
+                        <div class="section-title">Способ оплат</div>
+                        <form id="payment-methods-container" class="grid-container">
+                        </form>
+                    </div>
+                    <div>
+                        <div class="section-title">Пункт выдачи заказа</div>
+                        <form id="drop-points-container" class="flex-row" style="overflow-y: auto;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-colored full-length disabled" id="create-order-btn">
+                <div class="label">Оформить</div>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="footer-icon" onclick="loadMainPage()">
+            <img src="{{ url_for('static', filename='img/home-active.png') }}" id="home-icon" alt="Главная"
+                class="icon">
+        </div>
+        <div class="footer-icon" onclick="fetchCategories()">
+            <img src="{{ url_for('static', filename='img/categories.png') }}" id="categories-icon" alt="Категории"
+                class="icon">
+        </div>
+        <div class="footer-icon" onclick="fetchFavorites()">
+            <img src="{{ url_for('static', filename='img/likes.png') }}" id="likes-icon" alt="Избранное" class="icon">
+        </div>
+        <div class="footer-icon" onclick="fetchCart()">
+            <img src="{{ url_for('static', filename='img/cart.png') }}" id="cart-icon" alt="Корзина" class="icon">
+        </div>
+        <div class="footer-icon" onclick="fetchOrders()">
+            <img src="{{ url_for('static', filename='img/orders.png') }}" id="orders-icon" alt="Заказы" class="icon">
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='scripts/user.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='scripts/historyUser.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/gallery.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/mainPage.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/order.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/catalog.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/cart.js') }}"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+
+</html>

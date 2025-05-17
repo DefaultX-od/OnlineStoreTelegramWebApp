@@ -1,0 +1,88 @@
+.gallery-container {
+    /* margin-bottom: 10px; */
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease;
+    width: 100%;
+    min-width: 100%;
+}
+
+.gallery-item {
+    background-color: #fff;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.gallery-item video {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.gallery-buttons {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-buttons button{
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.gallery-items-dots{
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-items-dots li{
+    list-style: none;
+    width: 5px;
+    height: 5px;
+    background-color: darkgrey;
+    margin-top: 10px;
+    margin-left:5px;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+.gallery-items-dots li.active{
+    width: 15px;
+    background-color: black;
+}

@@ -1,0 +1,34 @@
+<div class="content-container">
+<div class="grid-container">
+  <div class="grid-object" onclick="loadOrdersAdmin(1)">
+    <div class="grid-object-img-container" style="padding: 30px;">
+      <img src="{{ url_for('static', filename='img/hourglass.png') }}">
+    </div>
+    <div class="grid-object-text">Новые заказы</div>
+  </div>
+  <div class="grid-object" onclick="loadOrdersAdmin(2)">
+    <div class="grid-object-img-container" style="padding: 30px;">
+      <img src="{{ url_for('static', filename='img/processing.png') }}">
+    </div>
+    <div class="grid-object-text">Заказы в работе</div>
+  </div>
+  <div class="grid-object" onclick="loadOrdersAdmin(4)">
+    <div class="grid-object-img-container" style="padding: 30px;">
+      <img src="{{ url_for('static', filename='img/ready-stock.png') }}">
+    </div>
+    <div class="grid-object-text">Заказы готовые к выдачи</div>
+  </div>
+  <div class="grid-object" onclick="loadOrdersAdmin(4, true, false)">
+    <div class="grid-object-img-container" style="padding: 30px;">
+      <img src="{{ url_for('static', filename='img/order-completed.png') }}">
+    </div>
+    <div class="grid-object-text">Завершенные заказы</div>
+  </div>
+  <div class="grid-object" onclick="loadOrdersAdmin(4, false, true)">
+    <div class="grid-object-img-container" style="padding: 30px;">
+      <img src="{{ url_for('static', filename='img/order-canceled.png') }}">
+    </div>
+    <div class="grid-object-text">Отмененные заказы</div>
+  </div>
+</div>
+</div>

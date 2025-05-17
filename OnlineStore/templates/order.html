@@ -1,0 +1,60 @@
+<div class="section">
+  <div class="section-title">Статус заказа</div>
+  <div id="statuses-container">
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Пункт вывоза и способ оплаты</div>
+  <div class="column-container">
+    <div class="column-container">
+      <div><b>Заказ будет ждать</b></div>
+      <div class="section-sub-col no-space">
+        <div><img class="icon small" src="{{ url_for('static', filename='img/map-pin.png') }}"></div>
+        <div id="drop-point"></div>
+      </div>
+    </div>
+    <div class="h-line"></div>
+    <div class="column-container">
+      <div><b>Способ оплаты</b></div>
+      <div class="section-sub-col no-space">
+        <div><img class="icon small" id="payment-method-icon"></div>
+        <div id="payment-method"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Состав заказа</div>
+  <div class="list-container" id="list-container">
+  </div>
+  </div>
+
+</div>
+
+<div class="section" id="cart-info">
+  <div class="section-title">О заказе</div>
+  <div
+    style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 10px; padding-bottom: 10px;">
+    <div id="items-count">2 товара</div>
+    <div id="cart-full-price">932р</div>
+  </div>
+  <div class="h-line"></div>
+  <div style="padding-top: 10px; padding-bottom: 10px;">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <div>Выгода</div>
+      <div id="cart-discount">-292р</div>
+    </div>
+  </div>
+  <div class="h-line"></div>
+  <div
+    style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 10px; padding-bottom: 10px;">
+    <div>Итого</div>
+    <div id="cart-final-price">485р</div>
+  </div>
+  <div class="btn-colored full-length flat" id="cancel-btn">
+    <div class="label">Отменить заказ</div>
+  </div>
+</div>

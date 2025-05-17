@@ -1,0 +1,35 @@
+<div class="section">
+  <div style="display: flex; margin-bottom: 5px; flex-direction: row; justify-content: space-between; align-items: center;">
+  <div class="section-title">Товары</div>
+  <div class="btn-small" onclick="presentWarningOverlay(clearCart)">Удалить все</div>
+</div>
+  <div class="list-container" id="list-container">
+  </div>
+</div>
+
+<div class="section" id="cart-info">
+  <div class="section-title">Сводка о заказе</div>
+  <div
+    style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 10px; padding-bottom: 10px;">
+    <div id="items-count">2 товара</div>
+    <div id="cart-full-price">932р</div>
+  </div>
+  <div class="h-line"></div>
+  <div style="padding-top: 10px; padding-bottom: 10px;">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <div>Выгода</div>
+      <div id="cart-discount">-292р</div>
+    </div>
+  </div>
+  <div class="h-line"></div>
+  <div
+    style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 10px; padding-bottom: 10px;">
+    <div>Итого</div>
+    <div id="cart-final-price">485р</div>
+  </div>
+  <div class="btn-colored full-length" onclick="fetchOrderOptions()">
+    <div class="label">Перейти к оформлению</div>
+  </div>
+</div>
+<!-- <div class="section">
+</div> -->

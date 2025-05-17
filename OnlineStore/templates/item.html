@@ -1,0 +1,45 @@
+<div class="gallery-container" id="gallery-container">
+    <div class="gallery">
+    </div>
+    <!-- Buttons -->
+    <div class="gallery-buttons">
+        <button id="prev">< </button>
+        <button id="next">></button>
+    </div>
+    <!-- dots -->
+
+</div>
+
+<!-- <div class="section">
+
+    
+</div> -->
+
+<div class="section-main">
+    <div class="section-sub-col">
+        <!-- <div class="product-detail-text-field"> -->
+        <div style="font-weight: bold; font-size: 18px;" id="product-name">Молоко пастеризованное Лебедяньмолоко 3.2%
+            1.4кг</div>
+        <!-- </div> -->
+        <div class="btn" id="like-btn"><img class="icon" style="width: 32px; height: 32px;"
+                src="{{ url_for('static', filename='img/like.png') }}" alt=""></div>
+    </div>
+    <div class="h-line" id="h-line" style="width: 100%;"></div>
+    <div class="section-sub-col">
+        <div class="price-tag" id="price-tag"></div>
+        <div class="btn-colored" id="add-to-cart-btn"><img class="icon"
+                src="{{ url_for('static', filename='img/cart-add.png') }}" alt="">в
+            корзину</div>
+        <div class="btn-group" id="item-counter">
+            <div class="flat-btn" id="item-dec-btn">
+                <img class="icon tiny" src="{{ url_for('static', filename='img/minus.png') }}">
+            </div>
+            <div id="item-counter-display">1</div>
+            <div class="flat-btn"  id="item-inc-btn">
+                <img class="icon tiny" src="{{ url_for('static', filename='img/plus.png') }}">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="main-details"></div>
+<div class="section" id="sub-details"></div>
