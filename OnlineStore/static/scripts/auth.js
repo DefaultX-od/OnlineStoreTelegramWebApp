@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
         .then(response => {
-            console.log(response);
             if (response.status === 422) {
                 return response.json().then(err => {
                     throw new Error(`Validation error: ${JSON.stringify(err)}`);
