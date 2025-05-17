@@ -322,8 +322,6 @@ function fetchProduct(itemId, historyEnabled = true){
             document.getElementById('loading').style.display = 'none';
             document.getElementById('content').style.display = 'flex';
             
-            console.log(data);
-            
             item = data.item;
             mainDetails = data.main_details;
             subDetails = data.sub_details;
