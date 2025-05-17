@@ -18,8 +18,6 @@ def connect():
             password=password,
             host=host
         )
-        print("Успешное подключение к БД!")
         return conn
     except mysql.connector.Error as err:
-        print(f'Ошибка подключения к БД: {err}')
         return None
