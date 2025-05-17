@@ -201,7 +201,6 @@ function showOrderAdmin(order){
     document.getElementById('cancel-btn').remove();
     
     showAdminTools(order.order_status, order.order_id, order.is_completed, order.is_canceled);
-    console.log(order.order_status);
 }
 
 function showAdminTools(currentStatus, orderId, isCompleted, isCanceled){
