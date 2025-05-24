@@ -58,7 +58,7 @@ def create_category_groups_template(data = None):
     if data is None:
         working_sheet['A1'] = 'Вид товара'
         working_sheet['B1'] = 'Группа Категорий'
-        working_sheet['С1'] = 'Скрыто'
+        working_sheet['C1'] = 'Скрыто'
         main_cat_validation.add('A2:A10')
         is_hidden.add('C2:C11')
     else:
@@ -376,7 +376,7 @@ def construct_category_groups(data):
     for i in range(1, len(data)):
         template_copy = category_template.copy()
         template_copy['id'] = data[i][0] if len(data[i]) > 3 else None
-        template_copy['main_category'] = main_categories[data[i][1]] if len(data[i])>2 else main_categories[data[i][0]]
+        template_copy['main_category'] = main_categories[data[i][1]] if len(data[i])>3 else main_categories[data[i][0]]
         template_copy['name'] = data[i][2] if len(data[i]) > 3 else data[i][1]
 
         is_hidden = data[i][3] if len(data[i]) > 3 else data[i][2]
