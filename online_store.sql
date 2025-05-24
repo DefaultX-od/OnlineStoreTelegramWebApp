@@ -524,7 +524,7 @@ CREATE PROCEDURE `add_drop_point`(
 	_country varchar(255),
 	_city varchar(255),
 	_street varchar(255),
-	_buiding varchar(255),
+	_building varchar(255),
 	_notes varchar(255),
 	_is_hidden tinyint
 )
